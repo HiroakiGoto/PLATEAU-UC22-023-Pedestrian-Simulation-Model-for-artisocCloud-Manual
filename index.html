@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>令和4年度 民間ユースケース開発　UC22-023「歩行者移動・回遊行動シミュレーション」の成果物</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+<link rel="stylesheet" href="./github_markdown_css/github-markdown.css" type="text/css">
+</head>
+<body>
+<h1 id="%E4%BB%A4%E5%92%8C4%E5%B9%B4%E5%BA%A6-%E6%B0%91%E9%96%93%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E9%96%8B%E7%99%BA-uc22-023%E6%AD%A9%E8%A1%8C%E8%80%85%E7%A7%BB%E5%8B%95%E3%83%BB%E5%9B%9E%E9%81%8A%E8%A1%8C%E5%8B%95%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E6%88%90%E6%9E%9C%E7%89%A9">令和4年度 民間ユースケース開発　UC22-023「歩行者移動・回遊行動シミュレーション」の成果物</h1>
+<h2 id="1-%E6%A6%82%E8%A6%81">1. 概要</h2>
+<p>本リポジトリは、国土交通省民間ユースケース開発UC22-023「歩行者移動・回遊行動シミュレーション」における歩行シミュレーションに関するソースコードの利用方法及び説明となります。
+このドキュメントでは、ユースケースの概要、歩行シミュレーションの概要、利用手順、注意事項等を記載しています。</p>
+<h2 id="2%E6%AD%A9%E8%A1%8C%E8%80%85%E7%A7%BB%E5%8B%95%E3%83%BB%E5%9B%9E%E9%81%8A%E8%A1%8C%E5%8B%95%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">2．「歩行者移動・回遊行動シミュレーション」について</h2>
+<h3 id="%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AE%E6%A6%82%E8%A6%81">ユースケースの概要</h3>
+<p>近年、全国的に「人間中心のまちづくり」が志向されているなか、その実現のためにさまざまなまちづくり活動（エリアマネジメント）が実施されています。エリアマネジメントを効果的なものとするためには、都市空間・歩行者の行動特性を理解することが必要です。</p>
+<p>今回の実証実験では、東京都西新宿エリアを対象として3D都市モデルを活用した歩行者行動シミュレーションを実施し、そのシミュレーション結果の分析と可視化によって、平常時・イベント実施時等におけるまちの賑わい創出のための施策の検討や検証を支援するツールを開発しました。</p>
+<h3 id="%E9%96%8B%E7%99%BA%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%A6%82%E8%A6%81">開発システムの概要</h3>
+<p>本リポジトリにあるソースコードは、ユースケースにおける歩行シミュレーションのソースコードとなります。
+歩行シミュレーションの概要は次のとおりです。</p>
+<h4 id="%E5%AF%BE%E8%B1%A1%E5%9C%B0%E5%8C%BA">対象地区</h4>
+<p>東京都新宿区　西新宿地区</p>
+<h4 id="%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%AE%9F%E6%96%BD%E7%9B%AE%E7%9A%84">シミュレーション実施目的</h4>
+<ul>
+<li>対象地区における平常時（平日/休日）の人流の再現</li>
+<li>対象地区においてイベント（2022年11月に実施された社会実験イベント「FUN MORE TIME SHINJUKU」を想定）が実施された際（平日/休日）の人流の変化の把握
+<ul>
+<li>イベント時の人流の変化の表現にあたっては、イベントの有無・イベントを宣伝する広告の有無を反映します。</li>
+</ul>
+</li>
+</ul>
+<h4 id="%E6%AD%A9%E8%A1%8C%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">歩行シミュレーションアルゴリズム</h4>
+<ul>
+<li>基本的な考え方として、西新宿において幅員が広く上空が開けている道路や新宿駅直結の地下通路を通行している人が多い実態を踏まえ、通路の特性として幅員が広い空間や上空が開けている空間を歩行者が好んで選択するような経路選択モデルを作成しました。</li>
+<li>さらに、イベント時の人流の再現にあたって、平常時の経路選択モデルに加えて歩行者がイベント実施場所の周辺に近づいた際、西新宿における過去の社会実験の結果を参考した歩行者がイベントに立ち寄る割合に基づき、そのイベントに立ち寄るような経路変更を行うモデルを作成しました。</li>
+<li>併せて、イベントを宣伝するような広告の設置を想定し、広告を見た歩行者がイベントへの興味を増し、イベント実施場所に近づくような経路変更を行うモデルを作成しました。</li>
+</ul>
+<p><img src="doc/simulation-algorithm.png" alt="simulation-algorithm"></p>
+<h2 id="3%E5%88%A9%E7%94%A8%E6%89%8B%E9%A0%86">3．利用手順</h2>
+<p>利用手順として、インストール方法、インストール後の使い方、動作環境、前提ソフトウェアを記載します。</p>
+<h3 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</h3>
+<ol>
+<li>
+<p>本リポジトリ内にあるファイル一式を、「Code」&gt;「Download ZIP」からダウンロードします。</p>
+</li>
+<li>
+<p>ダウンロードされた「PLATEAU-UC22-023-Pedestrian-Simulation-Model.zip」ファイルを解凍し、「model.json」ファイルを取得します。</p>
+</li>
+<li>
+<p>artisoc Cloud(https://artisoc-cloud.kke.co.jp/) にアクセスします。</p>
+</li>
+<li>
+<p>右上の「ログイン」ボタンから、ログインを行います。</p>
+</li>
+<li>
+<p>ログイン後、右上のボタンから「モデルをアップロード」を選択します。その後、モデルをアップロードできる画面に移るので、ドラッグ&amp;ドロップにより、取得した「model.json」ファイルをアップロードしてください。</p>
+</li>
+</ol>
+<p><img src="./doc/model-upload.png" alt="model-upload">
+<img src="./doc/model-json-import.png" alt="model-json-import"></p>
+<h3 id="%E4%BD%BF%E3%81%84%E6%96%B9">使い方</h3>
+<ol>
+<li>artisoc Cloudにモデルをインポート後、画面左上コントロールパネルから、シミュレーションの実行条件を設定します。具体的には、下記の項目を指定します。</li>
+</ol>
+<ul>
+<li>シミュレーション開始時刻（整数値）</li>
+<li>シミュレーション終了時刻（実数値）
+<ul>
+<li>例えば、「8.1」を指定した場合、8時6分まで、「8.2」を指定した場合、8時12分までの実行となります。</li>
+</ul>
+</li>
+<li>1ステップあたりの秒数
+<ul>
+<li>0.5秒/ステップ：シミュレーション内のエージェントがシミュレーション内の時間で0.5秒に1回計算、判断を行います。</li>
+<li>1秒/ステップ：シミュレーション内のエージェントがシミュレーション内の時間で1秒に1回計算、判断を行います。</li>
+<li>1ステップあたりの秒数を細かくするとエージェントの行動を細かく表現できますが、シミュレーション内の計算負荷が高くなるため、シミュレーションの実行時間が長くなります。</li>
+</ul>
+</li>
+<li>イベント有無
+<ul>
+<li>イベントあり</li>
+<li>イベントなし</li>
+</ul>
+</li>
+<li>曜日
+<ul>
+<li>平日</li>
+<li>土日祝日</li>
+</ul>
+</li>
+<li>広告有無
+<ul>
+<li>広告あり</li>
+<li>広告なし</li>
+</ul>
+</li>
+</ul>
+<p><img src="./doc/simulation-setting.png" alt="simulation-setting"></p>
+<ol start="2">
+<li>シミュレーション実行条件を設定後、シミュレーション実行ボタンを押し、シミュレーションを実行します。</li>
+</ol>
+<p><img src="./doc/simulation-execute.png" alt="simulation-execute"></p>
+<ol start="3">
+<li>
+<p>シミュレーション実行完了後、エージェントの行動ログ（csvファイル）が取得できます。</p>
+</li>
+<li>
+<p>エージェントの行動ルールを変更したい場合は、トップ画面で「ルール画面の表示」を行い、ルール編集画面に移ります。</p>
+</li>
+<li>
+<p>ルール編集画面に移るとpythonエディタが表示されるので、ルールを変更することが可能です。詳細は、artisoc Cloudマニュアル
+(https://artisoc-cloud.kke.co.jp/documents/manual/index.html)
+をご参照ください。</p>
+</li>
+</ol>
+<p><img src="./doc/edit_rules.png" alt="edit-rules"></p>
+<h3 id="%E5%8B%95%E4%BD%9C%E7%92%B0%E5%A2%83%E5%89%8D%E6%8F%90%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">動作環境、前提ソフトウェア</h3>
+<p>本ソースコードの編集には、artisoc Cloud standardライセンス（有償）が必要です。
+artisoc Cloud academicライセンス、playerライセンスでは動作しません。
+シミュレーションの閲覧するのみの場合は、playerライセンスを登録のうえ、上記「使い方」に基づき、artisoc Cloudにアクセスのうえ、ご覧ください。閲覧のみの場合、シミュレーション結果をファイルとして取得することはできません。</p>
+<h2 id="%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9----%E5%AE%9A%E5%9E%8B%E6%96%87%E3%81%AE%E3%81%9F%E3%82%81%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%AA%E3%81%84">ライセンス <!-- 定型文のため変更しない --></h2>
+<ul>
+<li>ソースコードおよび関連ドキュメントの著作権は国土交通省に帰属します。</li>
+<li>本ドキュメントは<a href="https://www.mlit.go.jp/plateau/sitepolicy/">Project PLATEAUのサイトポリシー</a>（CCBY4.0および政府標準利用規約2.0）に従い提供されています。</li>
+</ul>
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85----%E5%AE%9A%E5%9E%8B%E6%96%87%E3%81%AE%E3%81%9F%E3%82%81%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%AA%E3%81%84">注意事項 <!-- 定型文のため変更しない --></h2>
+<ul>
+<li>本レポジトリは参考資料として提供しているものです。動作保証は行っておりません。</li>
+<li>予告なく変更・削除する可能性があります。</li>
+<li>本レポジトリの利用により生じた損失及び損害等について、国土交通省はいかなる責任も負わないものとします。</li>
+</ul>
+<h2 id="%E5%8F%82%E8%80%83%E8%B3%87%E6%96%99----%E5%90%84%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AF%E7%B4%8D%E5%93%81%E6%99%82%E3%81%AB%E6%9B%B4%E6%96%B0">参考資料　 <!-- 各リンクは納品時に更新 --></h2>
+<ul>
+<li>歩行者移動・回遊行動シミュレーション技術検証レポート: https://www.mlit.go.jp/plateau/libraries/technical-reports/</li>
+<li>PLATEAU Webサイト Use caseページ「歩行者移動・回遊行動シミュレーション」: https://www.mlit.go.jp/plateau/use-case/</li>
+<li>artisoc Cloud：https://mas.kke.co.jp/artisoccloud/</li>
+</ul>
+
+</body>
+</html>
