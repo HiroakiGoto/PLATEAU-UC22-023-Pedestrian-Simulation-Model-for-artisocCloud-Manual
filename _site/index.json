@@ -1,0 +1,32 @@
+{
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "PLACEHOLDER | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "PLACEHOLDER TODO: Add .NET projects to the src folder and run docfx to generate REAL API Documentation!"
+  },
+  "articles/Environments.html": {
+    "href": "articles/Environments.html",
+    "title": "動作環境、前提ソフトウェア | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "動作環境、前提ソフトウェア ここでは、歩行シミュレーションのソースコード編集、閲覧に必要な動作環境、ソフトウェアを記載します。 動作環境 artisoc Cloudのインストールが閲覧に必要となります。 artisoc Cloudの使用マニュアルは、artisoc Cloudログイン後、取得することが可能です。 また、artisoc Cloudのチュートリアル資料をWeb上に公開していますので、併せてご参照ください。"
+  },
+  "articles/HowToUse.html": {
+    "href": "articles/HowToUse.html",
+    "title": "使い方 | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "使い方 ここでは、歩行シミュレーションモデルの使い方を記載します。 実行準備 artisoc Cloudにモデルをインポート後、画面左上コントロールパネルから、シミュレーションの実行条件を設定します。具体的には、下記の項目を指定します。 シミュレーション開始時刻（整数値） シミュレーション終了時刻（実数値） 例えば、「8.1」を指定した場合、8時6分まで、「8.2」を指定した場合、8時12分までの実行となります。 1ステップあたりの秒数 0.5秒/ステップ：シミュレーション内のエージェントがシミュレーション内の時間で0.5秒に1回計算、判断を行います。 1秒/ステップ：シミュレーション内のエージェントがシミュレーション内の時間で1秒に1回計算、判断を行います。 1ステップあたりの秒数を細かくするとエージェントの行動を細かく表現できますが、シミュレーション内の計算負荷が高くなるため、シミュレーションの実行時間が長くなります。 イベント有無 イベントあり イベントなし 曜日 平日 土日祝日 広告有無 広告あり 広告なし 実行 シミュレーション実行条件を設定後、シミュレーション実行ボタンを押し、シミュレーションを実行します。 シミュレーション実行完了後、エージェントの行動ログ（csvファイル）が取得できます。 ルールの編集 エージェントの行動ルールを変更したい場合は、トップ画面で「ルール画面の表示」を行い、ルール編集画面に移ります。 ルール編集画面に移るとpythonエディタが表示されるので、ルールを変更することが可能です。詳細は、artisoc Cloudマニュアル (https://artisoc-cloud.kke.co.jp/documents/manual/index.html) をご参照ください。"
+  },
+  "articles/Installation.html": {
+    "href": "articles/Installation.html",
+    "title": "インストール方法 | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "インストール方法 ここでは、歩行シミュレーションのソースコード編集のためのファイルインストール方法を記載します。 インストール手順 本リポジトリ内のあるファイル一式を「Code」> 「Download Zip」からダウンロードします。 ダウンロードされた「PLATEAU-UC22-023-Pedestrian-Simulation-Model.zip」ファイルを解凍し、「model.json」ファイルを取得します。 artisoc Cloudにアクセスします。 右上の「ログイン」ボタンから、ログインを行います。 ログイン後、右上のボタンから「モデルをアップロード」を選択します。その後、モデルをアップロードできる画面に移るので、ドラッグアンドドロップにより、取得した「model.json」ファイルをアップロードします。これにより、インストール完了となります。"
+  },
+  "articles/NecessaryLicenses.html": {
+    "href": "articles/NecessaryLicenses.html",
+    "title": "必要ライセンス、必要パッケージ | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "必要ライセンス、必要パッケージ ここでは、歩行シミュレーションのソースコード編集、閲覧に必要なライセンス、パッケージを記載します。 必要ライセンス artisoc Cloudでのシミュレーション実行のみ： artisoc Cloud player ライセンス以上で可能 この場合、player ライセンスを登録のうえ、artisoc Cloudにアクセスし、ご覧ください。なお、実行のみの場合、結果ファイルを取得することはできません。 artisoc Cloudでのソースコード閲覧、編集： artisoc Cloud standard ライセンスで可能 ソースコード（python）のみの閲覧 誰でも利用可能 ただし、ソースコードはartisoc Cloud専用でのソースコードとなっており、pythonファイルをそのまま実行しても動作しないものとなります。 参考資料 artisoc Cloud HP(https://mas.kke.co.jp/artisoccloud/)"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "UC22-023「歩行者移動・回遊行動シミュレーション」 歩行シミュレーションソースコード | PLATEAU-UC22-023 歩行シミュレーションモデル",
+    "keywords": "UC22-023「歩行者移動・回遊行動シミュレーション」 歩行シミュレーションソースコード 本マニュアルは、国土交通省民間ユースケース開発UC22-023「歩行者移動・回遊行動シミュレーション」における、歩行シミュレーションのソースコードの利用方法及び説明となります。 動作環境、前提ソフトウェア 必要ライセンス インストール方法 使い方"
+  }
+}
