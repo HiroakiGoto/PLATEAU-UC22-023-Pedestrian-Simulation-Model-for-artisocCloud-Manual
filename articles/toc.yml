@@ -2,11 +2,11 @@
   href: ../index.md
 - name: 利用を開始する
   items:
-  - name: 動作環境、前提ソフトウェア
-    href: Environments.md
-  - name: 必要ライセンス
-    href: NecessaryLicenses.md
   - name: インストール方法
     href: Installation.md
-  - name: 使い方
-    href: HowToUse.md
+  - name: 歩行シミュレーション実行準備
+    href: SimulationPreparation.md
+  - name: 歩行シミュレーション実行
+    href: SimulationExecution.md
+  - name: 歩行者の行動ルールの変更
+    href: SimulationRuleChange.md

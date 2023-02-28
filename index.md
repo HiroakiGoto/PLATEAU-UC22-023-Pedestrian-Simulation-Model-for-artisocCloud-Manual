@@ -1,11 +1,13 @@
 # UC22-023「歩行者移動・回遊行動シミュレーション」　歩行シミュレーションソースコード
 本マニュアルは、国土交通省民間ユースケース開発UC22-023「歩行者移動・回遊行動シミュレーション」における、歩行シミュレーションのソースコードの利用方法及び説明となります。
 
+このソースコードは、国土交通省民間ユースケース開発UC22-023「歩行者移動・回遊行動シミュレーション」において、歩行者の移動や回遊行動を模擬するシミュレーションに用いたものであり、歩行者の行動ルールをpythonベースでまとめたものになります。
+
 ![](./images/top-image.png)
 
-1. [動作環境、前提ソフトウェア](./articles/Environments.md)
-2. [必要ライセンス](./articles/NecessaryLicenses.md)
-2. [インストール方法](./articles/Installation.md)
-3. [使い方](./articles/HowToUse.md)
+1. [インストール方法](./articles/Installation.md)
+2. [歩行シミュレーション実行準備](./articles/SimulationPreparation.md)
+3. [歩行シミュレーション実行](./articles/SimulationExecution.md)
+4. [歩行者の行動ルールの変更](./articles/SimulationRuleChange.md)
 
 
