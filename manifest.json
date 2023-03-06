@@ -24,6 +24,17 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/ArtisocCloudReference.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ArtisocCloudReference.html",
+          "hash": "6LbJRSq7ZMfw4W8IiaqdgObrML29Z9tdSF+486P27Io="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/Installation.md",
       "output": {
         ".html": {
@@ -72,7 +83,17 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "zz3TTR3f6u/+cWEr8NnA1R6mzFH2QUxKYPjShaimH+k="
+          "hash": "jpC9AVxdjCVhn7/05g681iJQAbiIiy+6LLhTcVqRSKM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/artisoc-cloud-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/artisoc-cloud-image.png"
         }
       },
       "version": ""
@@ -93,6 +114,16 @@
       "output": {
         "resource": {
           "relative_path": "images/artisoc-cloud-open.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/artisoc-cloud-systems.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/artisoc-cloud-systems.png"
         }
       },
       "version": ""
@@ -196,7 +227,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "j2RDu8TCU9CsWqpTMvsWn273W9qXSGEjr+geXBTZyOM="
+          "hash": "v5CsjIHI10U2NSdTIw2iMbKCNQfqmBFtbBCvHSNVj6g="
         }
       },
       "version": ""
@@ -207,7 +238,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "CoSdwWovua5TWgxnO+aracfC9st8QK89GPpPqAUgckg="
+          "hash": "ms3cH0ekxWYYFduSxf+82XfBBpwShD3veE6qsivSRYk="
         }
       },
       "version": ""
